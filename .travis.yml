@@ -2,6 +2,6 @@ sudo: required
 services:
   - docker
 script:
-  ./configure && make
+  - ./configure && make
   - docker build -t agrochief/frontend .
   - docker images agrochief/frontend
