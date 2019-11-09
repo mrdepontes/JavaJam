@@ -1,0 +1,35 @@
+article.art-post.art-article
+  .art-postcontent.art-postcontent-0.clearfix
+    .art-content-layout
+      .art-content-layout-row
+        .art-layout-cell.layout-item-0(style="width: 67%")
+          if gear
+            include components/gear.pug
+          if contact
+            include components/contact.pug  
+          if home
+            h1
+              span(style="color:rgb(214, 126, 49);") modern cars:
+              |  many acpects to unite
+            block content
+            a(href="#") Read more...
+        .art-layout-cell.layout-item-0(style="width: 33%")
+          include components/latest-news.pug
+    .art-content-layout.layout-item-1
+      .art-content-layout-row
+        include components/featured.pug
+        include components/featured.pug
+        include components/featured.pug
+    .art-content-layout
+      .art-content-layout-row
+        .art-layout-cell.layout-item-0(style="width: 67%")
+          h1
+            span(style="color: rgb(214, 126, 49);") TIP:
+            |  MUST KNOW BEFORE THE RACE
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris. Cras elit nisl, rhoncus nec iaculis ultricies, feugiat eget sapien. Pellentesque ac felis tellus. Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.  Duis placerat justo eu nunc interdum ultrices. Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna.Donec vel neque in neque porta venenatis sed sit amet lectus. Morbi tristique posuere consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+          p
+            a(href="#") Read more...
+        .art-layout-cell.layout-item-0(style="width: 33%")
+          p
+            img(width="262" height="134" alt="" src="/images/iStock_000002651478.jpg" style="float: left;")

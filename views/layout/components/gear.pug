@@ -1,0 +1,28 @@
+#MainContent.box
+  .container
+    // Saved Space for other Opjects
+    #promotion.slogan
+      span
+        | Get a 10% discount when you wear a JavaJam shirt or bring
+        center
+        |  in your JavaJam mug!
+      h1
+        | JAVAJAM GEAR
+      p
+        | JavaJam gear not only looks good, it&apos;s good to your wallet, too.
+    .item
+      p
+        | JavaJam shirts are comforable to war to school and around town. 100 cotton. XL only $14.95
+      img.clearright(src='images/javashirt.gif')
+      form(method='post' action='http://www.webdevfoundations.net/scripts/cart.asp')
+        input#desc1(type='hidden' name='desc1' value='JavaJam Shirt')
+        input#cost1(type='hidden' name='cost1' value='14.95')
+        button(type='submit') Add to Cart
+    .item
+      p
+        | JavaJam mugs carry a full load of caffine (12oz.) to jump-start your morning. $9.95
+      img.clearright(src='images/javamug.gif')
+      form(method='post' action='http://www.webdevfoundations.net/scripts/cart.asp')
+        input#desc2(type='hidden' name='desc2' value='JavaJam Shirt')
+        input#cost2(type='hidden' name='cost2' value='14.95')
+        button(type='submit') Add to Cart

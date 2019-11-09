@@ -1,0 +1,18 @@
+doctype html
+html(dir="ltr" lang="en-US")
+    include head.pug
+    body
+    #art-main
+      include nav.pug
+      include header.pug
+      .art-sheet.clearfix
+        .art-layout-wrapper
+          .art-content-layout
+            .art-content-layout-row
+              .art-layout-cell.art-content
+                include article.pug
+        include footer.pug
+      p.art-page-footer
+        span#art-footnote-links
+          a(href="http://www.artisteer.com/" target="_blank") Web Template
+          |  created with Express. 
