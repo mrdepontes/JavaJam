@@ -1,6 +1,7 @@
 #NPM
 ##GLOBAL ADDRESSS
-				Windows | UNIX
+
+Windows | UNIX
  
 $ npm install -g 
 
