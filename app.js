@@ -7,6 +7,7 @@ var sassMiddleware = require('node-sass-middleware');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const searchAndPrintBooks = require('./services/search-jobs');
+const getDocument = require("./services/search-tours");
 var app = express();
 
 // view engine setup
@@ -42,6 +43,23 @@ app.use(async (req, res, next) => {
   res.locals.news = news; 
   return next();
 });
+
+app.use(async ( req, res, next ) => {
+  let tours = [];
+  try {
+    await getDocument()
+    .then(data => {
+      tours = data;
+    })
+    .catch(err => {
+      console.log('getDocument error', err)
+    })
+  } catch (error) {
+    console.log(error.message)
+  }
+  res.locals.tours = tours
+  return next();
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
