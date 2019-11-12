@@ -5,6 +5,8 @@ article.art-post.art-article
         .art-layout-cell.layout-item-0(style="width: 67%")
           if gear
             include components/gear.pug
+          if schedule
+            include components/schedule.pug  
           if contact
             include components/contact.pug  
           if home
@@ -13,8 +15,9 @@ article.art-post.art-article
               |  many acpects to unite
             block content
             a(href="#") Read more...
-        .art-layout-cell.layout-item-0(style="width: 33%")
-          include components/latest-news.pug
+        if !schedule
+          .art-layout-cell.layout-item-0(style="width: 33%")
+            include components/latest-news.pug
     .art-content-layout.layout-item-1
       .art-content-layout-row
         include components/featured.pug

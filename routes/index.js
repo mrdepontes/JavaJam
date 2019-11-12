@@ -16,6 +16,13 @@ router.get('/gear', function(req, res, next) {
   });
 });
 
+router.get('/schedule', function(req, res, next) {
+  res.render('index', { 
+    title: 'Express',
+    schedule: true, 
+  });
+});
+
 router.get('/contact-us', function(req, res, next) {
   res.render('index', { 
     title: 'Express',
